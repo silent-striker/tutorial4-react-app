@@ -15,13 +15,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element = {<Navigate to="/Login" replace/> } />
+          <Route path="*" element = {<NotFound />} />
+          <Route path="/" element = {<Navigate to="/login" replace/> } />
           <Route path="/login" element = {<Login setIsLoggedIn={setIsLoggedIn}/>} />
           <Route element={<ProtectedRoutes isLoggedIn={isLoggedIn}/>}>
             <Route path="/profileListing" element = {<ProfileListing />} />
             <Route path="/profile/:id" element = {<Profile />} />
           </Route>
-          <Route path="*" element = {<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
