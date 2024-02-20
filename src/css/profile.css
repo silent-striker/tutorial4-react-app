@@ -1,0 +1,32 @@
+.profile-page {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .profile-container > div {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .profile-container p {
+    margin: 5px 0;
+  }
