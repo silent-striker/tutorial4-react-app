@@ -6,14 +6,14 @@ import Profile from './pages/profile'
 import ProtectedRoutes from './utils/protectedRoutes'
 import NotFound from './pages/notfound';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import {HashRouter, Routes, Route, Navigate} from 'react-router-dom'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="*" element = {<NotFound />} />
           <Route path="/" element = {<Navigate to="/login" replace/> } />
@@ -23,7 +23,7 @@ function App() {
             <Route path="/profile/:id" element = {<Profile />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
